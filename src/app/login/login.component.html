@@ -1,0 +1,40 @@
+<div class="login-container">
+  <div class="login-box">
+    <img
+      src="assets/school-logo.png"
+      alt="School Logo"
+      class="logo-with-heading"
+    />
+    <div style="color: red" *ngIf="showError">
+      {{ errorMessage }}
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': isFieldInvalid('username') }"
+      >
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" required />
+        <div class="error-message" *ngIf="isFieldInvalid('username')">
+          Username is required
+        </div>
+      </div>
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': isFieldInvalid('password') }"
+      >
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
+        <div class="error-message" *ngIf="isFieldInvalid('password')">
+          Password is required
+        </div>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

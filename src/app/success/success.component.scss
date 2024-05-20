@@ -1,0 +1,34 @@
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Light gray background color */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px; /* Add space between the two button containers */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #af4c4cc2; /* Light green background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green color on hover */
+}

@@ -1,0 +1,129 @@
+<div class="regular-fee-container">
+  <div class="logo-heading">
+    <img
+      src="assets/school-logo.png"
+      alt="School Logo"
+      class="logo-with-heading"
+    />
+    <!-- <div class="heading">
+      <h1><i class="fas fa-school"></i> S.M.S VIMAL GROUP OF SCHOOLS</h1>
+      <h5>Arakkonam</h5>
+      <h6>Awake And Arise</h6>
+    </div> -->
+  </div>
+  <form [formGroup]="regularFeeForm" (ngSubmit)="onSubmit()">
+    <div class="detail-section">
+      <div class="row">
+        <div class="column">
+          <label for="date">Date:</label>
+          <input
+            type="text"
+            id="date"
+            formControlName="date"
+            [value]="currentDate"
+          />
+        </div>
+        <div class="column">
+          <label for="branch_number">Branch Number:</label>
+          <input
+            type="text"
+            id="branch_number"
+            formControlName="branch_number"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="student_name">Name of Pupil:</label>
+          <input type="text" id="student_name" formControlName="student_name" />
+        </div>
+        <div class="column">
+          <label for="fatherName">Father Name:</label>
+          <input type="text" id="father_name" formControlName="father_name" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="branch_name">Branch Name:</label>
+          <input type="text" id="branch_name" formControlName="branch_name" />
+        </div>
+        <div class="column">
+          <label for="contact_number">Contact No:</label>
+          <input
+            type="tel"
+            id="contact_number"
+            formControlName="contact_number"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="month_of_fee">Fees for the month:</label>
+          <select id="month_of_fee" formControlName="month_of_fee">
+            <option *ngFor="let month of months" [value]="month">
+              {{ month }}
+            </option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="standard">Standard:</label>
+          <select id="standard" formControlName="standard">
+            <option *ngFor="let standard of standards" [value]="standard">
+              {{ standard }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="section">Section:</label>
+          <select id="section" formControlName="section">
+            <option *ngFor="let section of section" [value]="section">
+              {{ section }}
+            </option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="admission_fee">Admission Fee:</label>
+          <input
+            type="number"
+            id="admission_fee"
+            formControlName="admission_fee"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="special_fee">Special Fees:</label>
+          <input type="number" id="special_fee" formControlName="special_fee" />
+        </div>
+        <div class="column">
+          <label for="building_fee">Building Fees:</label>
+          <input
+            type="number"
+            id="building_fee"
+            formControlName="building_fee"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="tuition_fee">Tuition Fees:</label>
+          <input type="number" id="tuition_fee" formControlName="tuition_fee" />
+        </div>
+        <div class="column">
+          <label for="total_fee">Total:</label>
+          <input
+            type="number"
+            id="total_fee"
+            formControlName="total_fee"
+            [value]="calculateTotal()"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

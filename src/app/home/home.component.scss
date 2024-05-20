@@ -1,0 +1,33 @@
+.home-container {
+  text-align: center;
+}
+
+.logo-with-heading {
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+.logo-with-heading img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.links a:hover {
+  background-color: #0056b3;
+}
